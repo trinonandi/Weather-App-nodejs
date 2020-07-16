@@ -6,6 +6,8 @@ const geocoding = require('./geocoding.js');
 const weather = require('./weather.js');
 
 const app = express();  //calling express() to init the server
+const port = process.env.PORT || 3000;
+
 
 const publicDirPath = path.join(__dirname,'../public'); //__dirname is a node variable to hold the directory name 
 // path.join helps us to get the path of the public folder
@@ -77,6 +79,6 @@ app.get('*', (req, res) => {    // setting a 404 page. Note: we have to use * at
     });
 })
 
-app.listen(3000, ()=>{  // portName : 3000
-    console.log('successful on port 3000');
+app.listen(port, ()=>{  // portName : 3000 localhost
+    console.log(`successful on port ${port}`);
 });
