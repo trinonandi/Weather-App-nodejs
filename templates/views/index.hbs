@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="icon" href="/img/icon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <br>
+        <form>
+            <input type="text" placeholder="Location">
+            <button>Search</button>
+        </form>
+        <h2 id="tempDisplay"></h2>
+        <h2 id='description'></h2>
+        <br>
+        <h3 id="location"></h3>
+        <p>
+          <ul id="list"></ul>  
+        </p>
+        
+    </div>
+    
+    {{>footer}}
+
+    <script src="/js/clientApp.js"></script>
+</body>
+</html>
